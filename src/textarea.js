@@ -3,7 +3,7 @@ import React, { useState } from "react";
 export default function TextArea() {
   const [text, setText] = useState();
   let saveData = () => {
-    localStorage.setItem("key", text);
+    localStorage.setItem("myDataa", text);
   };
 
   let clearData = () => {
