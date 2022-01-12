@@ -1,4 +1,5 @@
 import "./App.css";
+import TextArea from "./textarea";
 
 function App() {
   return (
@@ -6,11 +7,9 @@ function App() {
       <div className="box">
         <div className="field">
           <div className="control">
-            <textarea className="textarea is-large" placeholder="Notes..." />
+            <TextArea />
           </div>
         </div>
-        <button className="button is-large is-primary is-active">Save</button>
-        <button className="button is-large">Clear</button>
       </div>
     </div>
   );
