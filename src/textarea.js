@@ -1,15 +1,21 @@
-import React, { useState } from "react";
+import {useState} from "react";
+
 
 export default function TextArea() {
   const [text, setText] = useState();
-  let saveData = () => {
-    localStorage.setItem("myDataa", text);
-  };
+  
+  
+  const handle = () => {
+    localStorage.setItem('MyData', text);
+ };
+ const remove = () => {
+    localStorage.removeItem('MyData');
+  
+ };
 
-  let clearData = () => {
-    setText(() => "");
-  };
 
+  
+  
   return (
     <div>
       <textarea
@@ -21,11 +27,11 @@ export default function TextArea() {
       />
       <button
         className="button is-large is-primary is-active"
-        onClick={saveData}
+        onClick={handle}
       >
         Save
       </button>
-      <button className="button is-large" onClick={clearData}>
+      <button className="button is-large" onClick={remove}>
         Clear
       </button>
     </div>
