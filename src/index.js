@@ -1,7 +1,6 @@
 import "./index.css";
 
 import App from "./App";
-import TextArea from "./textarea";
 import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
@@ -9,7 +8,6 @@ import reportWebVitals from "./reportWebVitals";
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <TextArea />
   </React.StrictMode>,
   document.getElementById("root")
 );
