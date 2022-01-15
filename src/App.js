@@ -1,5 +1,4 @@
 import "./App.css";
-import TextArea from "./textarea";
 
 function App() {
   return (
@@ -7,7 +6,6 @@ function App() {
       <div className="box">
         <div className="field">
           <div className="control">
-            <TextArea />
           </div>
         </div>
       </div>
