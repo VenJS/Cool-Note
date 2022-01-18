@@ -6,13 +6,6 @@ export default function TextArea() {
   
   useEffect(() => setText(localStorage.getItem('MyData')), [])
   
-  const handle = () => {
-    localStorage.setItem('MyData', text);
- };
- const remove = () => {
-    localStorage.removeItem('MyData');
-  
- };
 
 
   
@@ -29,11 +22,15 @@ export default function TextArea() {
       />
       <button
         className="button is-large is-primary is-active"
-        onClick={handle}
+        onClick={() => {
+          localStorage.setItem('MyData', text)}}
       >
         Save
       </button>
-      <button className="button is-large" onClick={remove}>
+      <button className="button is-large" onClick={() => {
+    setText('') 
+    localStorage.removeItem('MyData');
+ }}>
         Clear
       </button>
     </div>
