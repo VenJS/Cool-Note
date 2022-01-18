@@ -1,9 +1,10 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
 
 export default function TextArea() {
   const [text, setText] = useState();
   
+  useEffect(() => setText(localStorage.getItem('MyData')), [])
   
   const handle = () => {
     localStorage.setItem('MyData', text);
@@ -21,6 +22,7 @@ export default function TextArea() {
       <textarea
         className="textarea is-large"
         placeholder="Notes..."
+        value={text}
         onChange={(e) => {
           setText(e.target.value);
         }}
