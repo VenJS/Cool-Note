@@ -5,8 +5,6 @@ export default function TextArea() {
   const [text, setText] = useState();
   
   useEffect(() => setText(localStorage.getItem('MyData')), [])
-  
-
 
   
   

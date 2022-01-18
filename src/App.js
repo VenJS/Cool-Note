@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <div className="box">
         <div className="field">
-          <div className="control">
+          <div className="control localStorage">
             <TextArea />
           </div>
         </div>
